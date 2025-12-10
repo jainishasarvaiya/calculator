@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9</title>
+
+    <style>
+        button{
+            width: 60px;
+            height: 60px;
+            margin: 10px 0px;
+            background-color: rgb(10, 18, 176);
+            box-shadow: 3px 5px 3px rgb(128, 196, 232);
+            color: whitesmoke;
+            border: none;
+            border-radius: 7px;
+        }
+        button:hover{
+            background-color: rgb(8, 92, 219);
+            box-shadow: 3px 5px 4px rgb(74, 133, 223);
+        }
+        .btnbox{
+            width: 350px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+        #res{
+            width: 250px;
+            height: 10px;
+            border: 1px solid rgb(44, 115, 223);
+            box-shadow: 3px 5px 4px rgb(128, 196, 232);
+            color: whitesmoke;
+            margin: 30px 35px;
+            text-align: center;
+            padding: 20px 0px;
+            border-radius: 5px;
+        }
+        .mainbox{
+            margin: 50px auto;
+            border: 1px solid black;
+            width: 370px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: darkblue;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="mainbox">
+<div id="res"></div>
+
+<div class="btnbox">
+<div class="box">
+    <button onclick="fun1('0')">0</button>
+    <button onclick="fun1('3')">3</button>
+    <button onclick="fun1('6')">6</button>
+    <button onclick="fun1('9')">9</button>
+</div>
+<div class="box">
+    <button onclick="fun1('1')">1</button>
+    <button onclick="fun1('4')">4</button>
+    <button onclick="fun1('7')">7</button>
+    <button onclick="fun3('c')">c</button>
+</div>
+<div class="box">
+    <button onclick="fun1('2')">2</button>
+    <button onclick="fun1('5')">5</button>
+    <button onclick="fun1('8')">8</button>
+    <button onclick="fun2('=')">=</button>
+</div>
+<div class="box">
+    <button onclick="fun1('+')">+</button>
+    <button onclick="fun1('-')">-</button>
+    <button onclick="fun1('*')">x</button>
+    <button onclick="fun1('/')">/</button>
+</div>
+</div>
+</div>
+
+<script>
+
+    
+    var a = document.getElementById("res");
+
+    function fun1(num){
+        a.innerHTML = a.innerHTML+num;
+        
+    }
+
+    function fun2(){
+        a.innerHTML = a.innerHTML+" = "+eval(a.innerHTML);
+    }
+
+    function fun3(){
+        a.innerHTML = " ";
+    }
+
+
+
+</script>
+</body>
+</html>
